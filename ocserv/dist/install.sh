@@ -4,30 +4,19 @@ set -x
 
 cd /opt/dist
 
-cat > /etc/ld.so.conf <<EOF
-/usr/glibc/lib
-/usr/lib
-/lib
-EOF
-
-cat > /etc/nsswitch.conf <<EOF
-hosts: files dns
-EOF
+wget ftp://ftp.infradead.org/pub/ocserv/ocserv-0.11.3.tar.xz
 
 apk update
-apk add xz bash git s6 execline openssl curl libarchive-tools
+apk add musl-dev iptables gnutls-dev readline-dev libnl3-dev lz4-dev libseccomp-dev libev-dev \
+    xz openssl gcc autoconf make linux-headers
 
-wget https://mirrors.ustc.edu.cn/archlinux/core/os/x86_64/glibc-2.23-5-x86_64.pkg.tar.xz
-tar Jxvf glibc-*.pkg.tar.xz
+tar Jxvf ocserv-*.tar.xz
+cd ocserv-*/
+./configure
+make
+make install
 
-rm -rf usr/lib/*/ usr/lib/*.a usr/lib/*.o
-mkdir -p /usr/glibc/bin /lib64
-mv usr/lib /usr/glibc/
-mv usr/bin/ldconfig /usr/glibc/bin/
-ln -sv /usr/glibc/lib/ld-linux-x86-64.so.2 /lib64/
-/usr/glibc/bin/ldconfig
-
-
+cd /
 rm -rf /opt/dist
 rm -rf /var/cache/apk/*
 
