@@ -17,7 +17,7 @@ EOF
 apk update
 apk add xz bash git s6 execline openssl curl libarchive-tools
 
-wget http://mirrors.us.kernel.org/archlinux/core/os/x86_64/glibc-2.23-5-x86_64.pkg.tar.xz
+wget https://mirrors.kernel.org/archlinux/core/os/x86_64/glibc-2.23-5-x86_64.pkg.tar.xz
 tar Jxvf glibc-*.pkg.tar.xz
 
 rm -rf usr/lib/*/ usr/lib/*.a usr/lib/*.o
