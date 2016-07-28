@@ -1,4 +1,4 @@
-FROM quay.io/galneryus_reincarnation/alpine-glibc:latest
+FROM quay.io/galneryus_reincarnation/alpine-glibc
 
 ADD  dist /opt/dist
 RUN  sh /opt/dist/install.sh
