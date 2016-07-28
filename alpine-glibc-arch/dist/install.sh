@@ -4,13 +4,6 @@ set -x
 
 cd /opt/dist
 
-mv /etc/apk/repositories /etc/apk/repositories.back
-
-cat > /etc/apk/repositories <<EOF
-http://mirrors.ustc.edu.cn/alpine/v3.4/main/
-http://mirrors.ustc.edu.cn/alpine/v3.4/community/
-EOF
-
 cat > /etc/ld.so.conf <<EOF
 /usr/glibc/lib
 /usr/lib
@@ -37,5 +30,4 @@ ln -sv /usr/glibc/lib/ld-linux-x86-64.so.2 /lib64/
 
 rm -rf /opt/dist
 rm -rf /var/cache/apk/*
-mv /etc/apk/repositories.back /etc/apk/repositories 
 
