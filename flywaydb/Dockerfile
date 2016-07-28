@@ -1,4 +1,4 @@
-FROM REPOURL_TODO/alpine-jdk:6
+FROM quay.io/galneryus_reincarnation/alpine-jdk:latest
 
 ADD  dist /opt/dist
 RUN  sh /opt/dist/install.sh

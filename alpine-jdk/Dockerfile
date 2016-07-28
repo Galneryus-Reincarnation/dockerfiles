@@ -1,4 +1,4 @@
-FROM REPOURL_TODO/alpine-glibc
+FROM quay.io/galneryus_reincarnation/alpine-glibc:latest
 
 ADD  dist /opt/dist
 RUN  sh /opt/dist/install.sh
