@@ -13,8 +13,9 @@ chmod +x sbt
 
 ./sbt dist
 
-mkdir /opt/kafka-manager
-unzip target/universal/kafka-manager-*.zip -d /opt/kafka-manager
+unzip target/universal/kafka-manager-*.zip -d /opt
+mv /opt/kafka-manager-* /opt/kafka-manager
+rm -rf /opt/kafka-manager/share
 
 cd /
 rm -rf /opt/dist
