@@ -45,7 +45,7 @@ docker run -it --rm \
            --net=host \
            -v /data/burrow:/data/burrow \
            -v /data/burrow/logs:/data/logs \
-           vpon/burrow:latest \
+           <image>:latest \
            /opt/Burrow -config /data/burrow/burrow.cfg
 ```
 
