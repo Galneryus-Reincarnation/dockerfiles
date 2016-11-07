@@ -8,7 +8,7 @@ cd /opt/dist
 apk update
 apk add perl make gcc openssl pcre readline libgcc \
   openssl-dev pcre-dev musl-dev \
-  s6 execline bash
+  bash
 
 
 _OPENRESTY_VERSION='1.11.2.1'

@@ -5,7 +5,7 @@ set -x
 cd /opt/dist
 
 apk update
-apk add haproxy openssl bash s6
+apk add haproxy openssl bash
 
 rm -rf /opt/dist
 rm -rf /var/cache/apk/*
