@@ -6,7 +6,7 @@ cd /opt/dist
 
 # sed -i 's#dl-cdn.alpinelinux.org#mirrors.ustc.edu.cn#' /etc/apk/repositories
 
-wget http://pkgs.fedoraproject.org/repo/pkgs/ocserv/ocserv-0.11.5.tar.xz/fbda999ce0b528d001bb46b3db6f5d49/ocserv-0.11.5.tar.xz
+wget http://pkgs.fedoraproject.org/repo/pkgs/ocserv/ocserv-0.11.6.tar.xz/fbda999ce0b528d001bb46b3db6f5d49/ocserv-0.11.6.tar.xz
 # wget ftp://ftp.infradead.org/pub/ocserv/ocserv-0.11.3.tar.xz
 
 apk update
