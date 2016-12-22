@@ -11,7 +11,7 @@ apk add perl make gcc openssl pcre readline libgcc \
   bash
 
 
-_OPENRESTY_VERSION='1.11.2.1'
+_OPENRESTY_VERSION='1.11.2.2'
 
 test -f openresty-$_OPENRESTY_VERSION.tar.gz ||  wget https://openresty.org/download/openresty-$_OPENRESTY_VERSION.tar.gz
 tar zxvf openresty-$_OPENRESTY_VERSION.tar.gz
