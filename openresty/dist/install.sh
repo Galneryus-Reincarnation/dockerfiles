@@ -5,8 +5,7 @@ set -x
 cd /opt/dist
 
 
-apk update
-apk add perl make gcc openssl pcre readline libgcc \
+apk add --no-cache perl make gcc openssl pcre readline libgcc \
   openssl-dev pcre-dev musl-dev \
   bash
 

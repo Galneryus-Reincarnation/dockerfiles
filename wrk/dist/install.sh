@@ -4,8 +4,7 @@ set -x
 
 cd /opt/dist
 
-apk update
-apk add make gcc perl musl-dev openssl-dev openssl libgcc
+apk add --no-cache make gcc perl musl-dev openssl-dev openssl libgcc
 
 wget https://github.com/wg/wrk/archive/4.0.2.tar.gz
 

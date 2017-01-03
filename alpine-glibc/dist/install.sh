@@ -14,8 +14,7 @@ cat > /etc/nsswitch.conf <<EOF
 hosts: files dns
 EOF
 
-apk update
-apk add xz bash git openssl curl libarchive-tools s6 execline
+apk add --no-cache xz bash git openssl curl libarchive-tools s6 execline
 
 wget https://mirrors.kernel.org/archlinux/core/os/x86_64/glibc-2.24-2-x86_64.pkg.tar.xz
 tar Jxvf glibc-*.pkg.tar.xz

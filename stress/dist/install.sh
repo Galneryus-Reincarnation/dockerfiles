@@ -4,8 +4,7 @@ set -x
 
 cd /opt/dist
 
-apk update
-apk add alpine-sdk
+apk add --no-cache alpine-sdk
 
 wget http://people.seas.harvard.edu/~apw/stress/stress-1.0.4.tar.gz
 

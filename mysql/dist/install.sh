@@ -4,8 +4,7 @@ set -x
 
 cd /opt/dist
 
-apk update
-apk add mariadb mariadb-client bash s6
+apk add --no-cache mariadb mariadb-client bash s6
 
 mkdir /etc/mysql/conf.d /run/mysqld/
 mv /etc/mysql/my.cnf /etc/mysql/my.cnf.back

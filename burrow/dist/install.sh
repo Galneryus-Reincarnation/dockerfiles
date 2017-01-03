@@ -4,7 +4,7 @@ set -x
 
 cd /opt/dist
 
-apk update && apk add git go
+apk add --no-cache git go
 
 git clone https://github.com/linkedin/Burrow
 export GOPATH=/opt/dist/gopath
