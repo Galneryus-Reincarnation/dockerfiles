@@ -18,8 +18,9 @@ export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
 export CGO_ENABLED=0
 
 cd kcptun
-pushd client; go get; go build; popd
-pushd server; go get; go build; popd
+
+cd client; go get; go build; cd ..
+cd server; go get; go build; cd ..
 
 mv client/client server/server /opt/
 
