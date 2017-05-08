@@ -4,7 +4,7 @@ set -x
 
 cd /opt/dist
 
-apk add --no-cache git go
+apk add --no-cache git go alpine-sdk
 
 git clone https://github.com/linkedin/Burrow
 export GOPATH=/opt/dist/gopath
@@ -16,7 +16,7 @@ go get
 go build
 mv Burrow /opt
 
-apk del git go
+apk del git go alpine-sdk
 rm -rf /opt/dist
 rm -rf /var/cache/apk/*
 
