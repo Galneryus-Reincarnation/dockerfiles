@@ -16,10 +16,14 @@ wget https://github.com/astaxie/bat/releases/download/v0.0.1/bat_0.0.1_linux_amd
 wget https://github.com/stedolan/jq/releases/download/jq-1.5/jq-linux64                     -O $BIN_DIR/jq
 #wget https://releases.hashicorp.com/consul/0.7.1/consul_0.7.1_web_ui.zip                    -O consul_web.zip
 
-for f in *.zip; do
-    bsdtar xf $f -C /opt
+mv mc minio jq nomad-ui $BIN_DIR/
+
+for f in consul.zip nomad.zip usql.bz2 bat.tar.gz; do
+    bsdtar xvf $f
 done
 
+mv consul noamd usql $BIN_DIR/
+mv bat_*/bat $BIN_DIR/
 
 chmod +x $BIN_DIR/*
 
