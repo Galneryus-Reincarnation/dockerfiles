@@ -1,7 +1,6 @@
 #!/bin/sh
 
 set -x
-
 cd /opt/dist
 
 BIN_DIR=/usr/local/bin
@@ -26,6 +25,5 @@ mv consul noamd usql $BIN_DIR/
 mv bat_*/bat $BIN_DIR/
 
 chmod +x $BIN_DIR/*
-
 rm -rf /opt/dist
 
