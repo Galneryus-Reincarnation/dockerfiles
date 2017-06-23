@@ -30,7 +30,7 @@ for f in consul.zip nomad.zip usql.bz2 bat.tar.gz; do
     bsdtar xvf $f
 done
 
-mv consul noamd usql $BIN_DIR/
+mv consul nomad usql $BIN_DIR/
 mv bat_*/bat $BIN_DIR/
 
 chmod +x $BIN_DIR/*
