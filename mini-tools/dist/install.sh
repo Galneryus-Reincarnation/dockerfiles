@@ -22,7 +22,7 @@ wget https://dl.minio.io/client/mc/release/linux-amd64/mc                       
 wget https://dl.minio.io/server/minio/release/linux-amd64/minio                             -O $BIN_DIR/minio
 wget https://github.com/astaxie/bat/releases/download/v0.0.1/bat_0.0.1_linux_amd64.tar.gz   -O bat.tar.gz
 wget https://github.com/stedolan/jq/releases/download/jq-1.5/jq-linux64                     -O $BIN_DIR/jq
-
+wget https://github.com/bcicen/ctop/releases/download/v0.6.0/ctop-0.6.0-linux-amd64         -O $BIN_DIR/ctop
 
 for f in *.zip *.bz2 *.tar.gz; do
     bsdtar xvf $f
