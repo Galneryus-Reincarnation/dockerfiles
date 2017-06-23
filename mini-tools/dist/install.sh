@@ -30,6 +30,7 @@ done
 
 mv consul nomad vault terraform packer usql consul-replicate consul-template envconsul $BIN_DIR/
 mv bat_*/bat $BIN_DIR/
+mv consul-migrate_linux_amd64 $BIN_DIR/consul-migrate
 
 chmod +x $BIN_DIR/*
 rm -rf /opt/dist
