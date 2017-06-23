@@ -8,8 +8,8 @@ pacman -Syy
 pacman -S --noconfirm jdk8-openjdk python2 base-devel wget
 rm -rf /var/cache/pacman/pkg/
 
-
-
+wget https://aur.archlinux.org/cgit/aur.git/snapshot/jdk.tar.gz -O jdk.tar.gz
+bsdtar jdk.tar.gz && pushd jdk && makepkg -si --noconfirm && popd
 
 #### TOOLS
 
