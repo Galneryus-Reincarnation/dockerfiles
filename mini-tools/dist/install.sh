@@ -16,6 +16,7 @@ wget https://releases.hashicorp.com/consul-template/0.18.5/consul-template_0.18.
 wget https://releases.hashicorp.com/consul-replicate/0.3.1/consul-replicate_0.3.1_linux_amd64.zip               -O consul-replicate.zip
 wget https://github.com/hashicorp/consul-migrate/releases/download/v0.1.0/consul-migrate_v0.1.0_linux_amd64.zip -O consul-migrate.zip
 
+wget https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-5.4.3-linux-x86_64.tar.gz -O filebeat.tar.gz
 wget https://github.com/knq/usql/releases/download/v0.5.0/usql-0.5.0-linux-amd64.tar.bz2    -O usql.bz2
 wget https://github.com/iverberk/nomad-ui/releases/download/v0.3.1/nomad-ui-linux-amd64     -O $BIN_DIR/nomad-ui
 wget https://dl.minio.io/client/mc/release/linux-amd64/mc                                   -O $BIN_DIR/mc
@@ -29,8 +30,9 @@ for f in *.zip *.bz2 *.tar.gz; do
 done
 
 mv consul nomad vault terraform packer usql consul-replicate consul-template envconsul $BIN_DIR/
-mv bat_*/bat $BIN_DIR/
-mv consul-migrate_linux_amd64 $BIN_DIR/consul-migrate
+mv bat_*/bat                    $BIN_DIR/
+mv filebeat-*/filebeat          $BIN_DIR/
+mv consul-migrate_linux_amd64   $BIN_DIR/consul-migrate
 
 chmod +x $BIN_DIR/*
 rm -rf /opt/dist
