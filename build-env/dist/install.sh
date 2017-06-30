@@ -15,8 +15,13 @@ bsdtar jdk.tar.gz && pushd jdk && makepkg -si --noconfirm && popd
 ## perf agent
 cd /opt
 wget https://github.com/jvm-profiling-tools/perf-map-agent/archive/master.tar.gz -O perf-map-agent.tar.gz
-tar zxvf *.tar.gz
-#git clone https://github.com/jrudolph/perf-map-agent.git
+wget https://github.com/brendangregg/FlameGraph/archive/master.tar.gz -O FlameGrap.tar.gz
+
+for x in *.tar.gz:
+do
+    tar zxvf $x
+done
+
 cd perf-map-agent-master
 cmake .
 make
