@@ -5,7 +5,7 @@ cd /opt/dist
 
 
 pacman -Syy
-pacman -S --noconfirm jdk8-openjdk python2 base-devel wget perf cmake gcc
+pacman -S --noconfirm python2 base-devel wget perf cmake gcc
 rm -rf /var/cache/pacman/pkg/
 
 wget https://aur.archlinux.org/cgit/aur.git/snapshot/jdk.tar.gz -O jdk.tar.gz
