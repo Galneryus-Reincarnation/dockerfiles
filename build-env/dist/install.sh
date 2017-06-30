@@ -6,7 +6,7 @@ cd /opt/dist
 echo 'Server = http://ftp.tsukuba.wide.ad.jp/Linux/archlinux/$repo/os/$arch' | tee /etc/pacman.d/mirrorlist
 
 pacman -Syy
-pacman -S --noconfirm python2 base-devel wget perf cmake gcc
+pacman -S --noconfirm python2 base-devel wget perf cmake
 rm -rf /var/cache/pacman/pkg/
 
 wget https://aur.archlinux.org/cgit/aur.git/snapshot/jdk.tar.gz -O jdk.tar.gz
