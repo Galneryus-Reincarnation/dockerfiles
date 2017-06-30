@@ -18,5 +18,7 @@ wget https://github.com/jvm-profiling-tools/perf-map-agent/archive/master.tar.gz
 tar zxvf *.tar.gz
 #git clone https://github.com/jrudolph/perf-map-agent.git
 cd perf-map-agent-master
+cmake .
+make
 
 rm -rf /opt/dist
