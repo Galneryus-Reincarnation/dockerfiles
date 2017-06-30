@@ -17,7 +17,7 @@ cd /opt
 wget https://github.com/jvm-profiling-tools/perf-map-agent/archive/master.tar.gz -O perf-map-agent.tar.gz
 wget https://github.com/brendangregg/FlameGraph/archive/master.tar.gz -O FlameGrap.tar.gz
 
-for x in *.tar.gz:
+for x in *.tar.gz;
 do
     tar zxvf $x
 done
