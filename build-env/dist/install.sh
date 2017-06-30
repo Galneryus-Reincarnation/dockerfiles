@@ -14,7 +14,9 @@ bsdtar jdk.tar.gz && pushd jdk && makepkg -si --noconfirm && popd
 
 ## perf agent
 cd /opt
-git clone https://github.com/jrudolph/perf-map-agent.git
-cd perf-map-agent
+wget https://github.com/jvm-profiling-tools/perf-map-agent/archive/master.tar.gz -O perf-map-agent.tar.gz
+tar zxvf *.tar.gz
+#git clone https://github.com/jrudolph/perf-map-agent.git
+cd perf-map-agent-master
 
 rm -rf /opt/dist
