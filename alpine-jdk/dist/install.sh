@@ -37,7 +37,7 @@ rm     $JVM_BASE/jre/lib/amd64/libgstreamer-lite.so
 rm     $JVM_BASE/jre/lib/amd64/libjavafx*.so
 rm     $JVM_BASE/jre/lib/amd64/libjfx*.so
 
-# set default dns cache to 30 seconds (negative = cache failure)
+# dns cache
 sed -i 's/^networkaddress.cache/#networkaddress.cache/' $JVM_BASE/jre/lib/security/java.security
 cat >> $JVM_BASE/jre/lib/security/java.security <<EOF
 networkaddress.cache.ttl=30

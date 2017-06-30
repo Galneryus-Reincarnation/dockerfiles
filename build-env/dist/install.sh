@@ -23,6 +23,14 @@ mv PKGBUILD_ PKGBUILD
 sudo -u nobody makepkg
 pacman -U --noconfirm *.pkg.tar
 
+# dns cache
+sed -i 's/^networkaddress.cache/#networkaddress.cache/' $JAVA_HOME/jre/lib/security/java.security
+cat >> $JAVA_HOME/jre/lib/security/java.security <<EOF
+networkaddress.cache.ttl=30
+networkaddress.cache.negative.ttl=30
+EOF
+
+
 ## perf agent
 cd /opt
 wget https://github.com/jvm-profiling-tools/perf-map-agent/archive/master.tar.gz -O perf-map-agent.tar.gz
