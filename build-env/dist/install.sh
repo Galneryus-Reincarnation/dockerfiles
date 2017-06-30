@@ -45,4 +45,4 @@ cd perf-map-agent-master
 cmake .
 make
 
-rm -rf /opt/dist
+rm -rf /opt/dist /opt/*.tar.gz
