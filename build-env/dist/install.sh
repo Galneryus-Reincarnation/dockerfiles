@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# TODO: llvm (scala-native dependencies)
+
 set -x
 cd /opt/dist
 
