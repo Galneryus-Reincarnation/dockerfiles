@@ -6,5 +6,3 @@ ENV FLAMEGRAPH_DIR     /opt/FlameGraph-master
 ADD  dist /opt/dist
 RUN  sh /opt/dist/install.sh
 
-#USER root
-#ENV HOME /root
