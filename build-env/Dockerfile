@@ -4,5 +4,5 @@ ENV JAVA_HOME          /usr/lib/jvm/java-8-jdk
 ENV FLAMEGRAPH_DIR     /opt/FlameGraph-master
 
 ADD  dist /opt/dist
-RUN  sh /opt/dist/install.sh
+RUN  bash /opt/dist/install
 

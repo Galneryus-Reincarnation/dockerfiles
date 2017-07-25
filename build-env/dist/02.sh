@@ -1,17 +1,7 @@
 #!/bin/sh
 
-# TODO: llvm (scala-native dependencies)
-
 set -x
 cd /opt/dist
-
-echo 'Server = http://ftp.tsukuba.wide.ad.jp/Linux/archlinux/$repo/os/$arch' | tee /etc/pacman.d/mirrorlist
-#echo 'Server = https://mirrors.kernel.org/archlinux/$repo/os/$arch' | tee /etc/pacman.d/mirrorlist
-
-pacman -Syy
-pacman -S --noconfirm python2 base-devel wget perf cmake git
-pacman -S --noconfirm --asdeps ca-certificates-java hicolor-icon-theme java-environment-common java-runtime-common nss xdg-utils
-rm -rf /var/cache/pacman/pkg/
 
 wget https://aur.archlinux.org/cgit/aur.git/snapshot/jdk.tar.gz -O jdk.tar.gz
 bsdtar xvf jdk.tar.gz
@@ -55,23 +45,3 @@ rm     $JVM_HOME/jre/lib/amd64/libgstreamer-lite.so
 rm     $JVM_HOME/jre/lib/amd64/libjavafx*.so
 rm     $JVM_HOME/jre/lib/amd64/libjfx*.so
 
-
-## perf agent
-cd /opt
-wget https://github.com/jvm-profiling-tools/perf-map-agent/archive/master.tar.gz -O perf-map-agent.tar.gz
-wget https://github.com/brendangregg/FlameGraph/archive/master.tar.gz            -O FlameGrap.tar.gz
-wget https://github.com/jvm-profiling-tools/async-profiler/archive/master.tar.gz -O async-profiler.tar.gz
-
-for x in *.tar.gz;
-do
-    bsdtar xvf $x
-done
-
-cd /opt/perf-map-agent-master
-cmake .
-make
-
-cd /opt/async-profiler-master
-make
-
-rm -rf /opt/dist /opt/*.tar.gz

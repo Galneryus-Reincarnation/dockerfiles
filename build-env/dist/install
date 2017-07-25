@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# TODO: llvm (scala-native dependencies)
+
+set -x
+cd /opt/dist
+
+for f in *.sh; do
+    bash ./$f
+done
+
