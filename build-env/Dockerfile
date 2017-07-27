@@ -1,6 +1,6 @@
 FROM base/archlinux
 
-USER ROOT
+USER root
 ENV HOME                /root
 ENV JAVA_HOME          /usr/lib/jvm/java-8-jdk
 ENV FLAMEGRAPH_DIR     /opt/FlameGraph-master
