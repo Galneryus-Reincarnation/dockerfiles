@@ -8,10 +8,7 @@ bsdtar xvf jdk.tar.gz
 cd jdk
 chmod og+w .
 
-touch PKGBUILD_
-echo "PKGEXT='.pkg.tar'" >> PKGBUILD_
-cat PKGBUILD >> PKGBUILD_
-mv PKGBUILD_ PKGBUILD
+sed -i "1iPKGEXT='.pkg.tar'" PKGBUILD
 sed -i "s#'xdg-utils'##" PKGBUILD
 sed -i "s#'hicolor-icon-theme'##" PKGBUILD
 
