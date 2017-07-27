@@ -12,6 +12,7 @@ touch PKGBUILD_
 echo "PKGEXT='.pkg.tar'" >> PKGBUILD_
 cat PKGBUILD >> PKGBUILD_
 mv PKGBUILD_ PKGBUILD
+sed -i "s#'xdg-utils'##" PKGBUILD
 
 sudo -u nobody makepkg
 pacman -U --noconfirm *.pkg.tar
