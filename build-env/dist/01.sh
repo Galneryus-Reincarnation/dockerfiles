@@ -7,7 +7,7 @@ echo 'Server = http://ftp.tsukuba.wide.ad.jp/Linux/archlinux/$repo/os/$arch' | t
 #echo 'Server = https://mirrors.kernel.org/archlinux/$repo/os/$arch' | tee /etc/pacman.d/mirrorlist
 
 pacman -Syy
-pacman -S --noconfirm python2 make gcc wget perf cmake git
+pacman -S --noconfirm python2 base-devel wget perf cmake git
 pacman -S --noconfirm --asdeps ca-certificates-java java-environment-common java-runtime-common nss
 rm -rf /var/cache/pacman/pkg/*
 
