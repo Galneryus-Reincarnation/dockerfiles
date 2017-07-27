@@ -13,6 +13,7 @@ echo "PKGEXT='.pkg.tar'" >> PKGBUILD_
 cat PKGBUILD >> PKGBUILD_
 mv PKGBUILD_ PKGBUILD
 sed -i "s#'xdg-utils'##" PKGBUILD
+sed -i "s#'hicolor-icon-theme'##" PKGBUILD
 
 sudo -u nobody makepkg
 pacman -U --noconfirm *.pkg.tar

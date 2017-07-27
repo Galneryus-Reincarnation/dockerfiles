@@ -8,6 +8,6 @@ echo 'Server = http://ftp.tsukuba.wide.ad.jp/Linux/archlinux/$repo/os/$arch' | t
 
 pacman -Syy
 pacman -S --noconfirm python2 make gcc wget perf cmake git
-pacman -S --noconfirm --asdeps ca-certificates-java hicolor-icon-theme java-environment-common java-runtime-common nss xdg-utils
+pacman -S --noconfirm --asdeps ca-certificates-java java-environment-common java-runtime-common nss
 rm -rf /var/cache/pacman/pkg/*
 
