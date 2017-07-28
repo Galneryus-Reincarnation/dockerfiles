@@ -7,16 +7,16 @@ cd /opt/dist
 apk add --no-cache git go alpine-sdk bash
 
 
-git clone https://github.com/linkedin/Burrow
 export GOPATH=/opt/dist/gopath
 export GOROOT=/usr/lib/go
 mkdir $GOPATH
 
+git clone https://github.com/linkedin/Burrow
 cd Burrow
 wget https://raw.githubusercontent.com/pote/gpm/v1.4.0/bin/gpm
 chmod +x gpm
 ./gpm get
-#go get
+go get github.com/linkedin/Burrow
 go build
 mv Burrow /opt
 
