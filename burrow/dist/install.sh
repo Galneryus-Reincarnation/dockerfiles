@@ -15,8 +15,8 @@ mkdir $GOPATH
 cd Burrow
 wget https://raw.githubusercontent.com/pote/gpm/v1.4.0/bin/gpm
 chmod +x gpm
-./gpm install
-go get
+./gpm get
+#go get
 go build
 mv Burrow /opt
 
