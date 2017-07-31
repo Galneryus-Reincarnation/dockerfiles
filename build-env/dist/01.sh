@@ -6,5 +6,5 @@ cd /opt/dist
 yum update -y
 yum install epel-release -y
 
-yum install -y git wget unzip bsdtar gcc gcc-g++ make perf cmake
+yum install -y which git wget unzip bsdtar gcc gcc-g++ make perf cmake
 
