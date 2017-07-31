@@ -11,3 +11,5 @@ pacman -S --noconfirm python2 base-devel wget perf cmake git
 pacman -S --noconfirm --asdeps ca-certificates-java java-environment-common java-runtime-common nss
 rm -rf /var/cache/pacman/pkg/*
 
+wget https://archive.archlinux.org/packages/p/python2/python2-2.7.13-2-x86_64.pkg.tar.xz
+pacman -U --noconfirm python2-2.7.13-2-x86_64.pkg.tar.xz
