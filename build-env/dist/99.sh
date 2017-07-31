@@ -2,7 +2,7 @@
 
 set -x
 
-#pacman -Rsn --noconfirm make gcc cmake
+yum erase -y gcc gcc-g++ make perf cmake
 
 rm -rf /opt/dist /opt/*.tar.gz
 

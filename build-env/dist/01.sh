@@ -3,13 +3,8 @@
 set -x
 cd /opt/dist
 
-echo 'Server = http://ftp.tsukuba.wide.ad.jp/Linux/archlinux/$repo/os/$arch' | tee /etc/pacman.d/mirrorlist
-#echo 'Server = https://mirrors.kernel.org/archlinux/$repo/os/$arch' | tee /etc/pacman.d/mirrorlist
+yum update -y
+yum install epel-release -y
 
-pacman -Syy
-pacman -S --noconfirm python2 base-devel wget perf cmake git
-pacman -S --noconfirm --asdeps ca-certificates-java java-environment-common java-runtime-common nss
-rm -rf /var/cache/pacman/pkg/*
+yum install -y git wget unzip bsdtar gcc gcc-g++ make perf cmake
 
-wget https://archive.archlinux.org/packages/p/python2/python2-2.7.13-2-x86_64.pkg.tar.xz
-pacman -U --noconfirm python2-2.7.13-2-x86_64.pkg.tar.xz
