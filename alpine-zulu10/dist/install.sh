@@ -4,7 +4,7 @@ set -x
 
 cd /opt/dist
 
-curl -OLH https://cdn.azul.com/zulu/bin/zulu10.1+11-jdk10-linux_x64.tar.gz
+curl -OL https://cdn.azul.com/zulu/bin/zulu10.1+11-jdk10-linux_x64.tar.gz
 
 JVM_BASE=/usr/jvm
 
