@@ -15,11 +15,11 @@ curl -O https://src.fedoraproject.org/repo/pkgs/ocserv/ocserv-0.12.1.tar.xz/sha5
 tar Jxvf ocserv-*.tar.xz
 cd ocserv-*/
 ./configure
-make
+make -j4
 make install
 
 apk del gcc make musl-dev nettle-dev gnutls-dev libev-dev readline-dev linux-headers lz4-dev libnl3-dev talloc-dev
-apk add --no-cache gnutls gnutls-c++ libev libffi libgmpxx libnl3 libnl3-cli libtasn1 lz4 ncurses-libs ncurses-terminfo ncurses-terminfo-base nettle p11-kit readline talloc
+apk add --no-cache gnutls gnutls-c++ libev libffi libgmpxx libnl3 libnl3-cli libtasn1 lz4-libs ncurses-libs ncurses-terminfo ncurses-terminfo-base nettle p11-kit readline talloc
 
 cd /
 rm -rf /opt/dist
