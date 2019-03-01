@@ -19,5 +19,7 @@ asdf reshim rust nightly
 
 git clone https://github.com/dani-garcia/bitwarden_rs
 cd bitwarden_rs
+git reset --hard 1.7.0
+
 cargo run --release
 
