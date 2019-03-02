@@ -4,7 +4,7 @@ set -x
 
 cd /opt/dist
 
-apt update && apt upgrade -y && apt install -y pkg-config libssl-dev git wget curl
+apt update && apt upgrade -y && apt install -y pkg-config libssl-dev git wget curl build-essential
 
 git clone https://github.com/asdf-vm/asdf ~/.asdf
 source ~/.asdf/asdf.sh
