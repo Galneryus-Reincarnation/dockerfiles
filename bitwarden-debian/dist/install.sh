@@ -23,3 +23,5 @@ git reset --hard 1.7.0
 
 cargo run --release
 
+echo 'DONE'
+
