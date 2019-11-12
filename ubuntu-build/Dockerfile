@@ -1,4 +1,4 @@
-FROM ubuntu:1604
+FROM ubuntu:16.04
 
 USER root
 ENV HOME                /root
