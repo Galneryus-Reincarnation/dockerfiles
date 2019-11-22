@@ -5,7 +5,7 @@ ENV     HOME  /root
 
 RUN     apt update && apt upgrade --yes && \
         apt install --yes build-essential wget curl rsync bsdtar xz-utils python git \
-        libgl1-mesa-dev libxi-dev
+        libgl1-mesa-dev libxi-dev locales
 
 RUN     cd /tmp && \
         wget -nv https://nodejs.org/dist/v12.13.1/node-v12.13.1-linux-x64.tar.xz && \
