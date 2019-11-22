@@ -4,7 +4,7 @@ USER    root
 ENV     HOME  /root
 
 RUN     apt update && apt upgrade --yes && \
-        apt install --yes build-essential wget curl rsync bsdtar xz-utils python \
+        apt install --yes build-essential wget curl rsync bsdtar xz-utils python git \
         libgl1-mesa-dev libxi-dev
 
 RUN     cd /tmp && \
