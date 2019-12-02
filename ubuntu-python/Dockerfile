@@ -9,6 +9,6 @@ RUN  apt update && apt install --yes software-properties-common && \
      apt install --yes \
      g++ gcc libc6-dev libffi-dev libgmp-dev make xz-utils zlib1g-dev git \
      libzstd-dev zstd \
-     gnupg netbase wget curl rsync \
+     gnupg netbase wget curl rsync parallel \
      python3.7-dev libpython3.7-dev libmysqlclient20 virtualenv
 
