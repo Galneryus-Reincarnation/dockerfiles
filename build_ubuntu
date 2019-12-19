@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+build() {
+    pushd $1 > /dev/null
+    local image=tnairav/$1
+    local tag=latest
+    local dockerfile=Dockerfile
+    if [ -n "$2" ]
+    then
+        tag=$2
+        dockerfile=Dockerfile.$tag
+    fi
+
+    echo docker build --no-cache --squash -t build-tmp --network=host -f $dockerfile  .
+    echo docker tag build-tmp $image:$tag
+    echo docker push $image:$tag
+    popd > /dev/null
+}
+
+build ubuntu-build
+build ubuntu-node
+build ubuntu-node 13
+build ubuntu-python
+build ubuntu-zulu
+
