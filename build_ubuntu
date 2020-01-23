@@ -22,4 +22,4 @@ build ubuntu-node
 build ubuntu-node 13
 build ubuntu-python
 build ubuntu-zulu
-
+build ubuntu-tarantool
