@@ -12,7 +12,7 @@ RUN  echo 'deb http://download.tarantool.org/tarantool/1.10/ubuntu/ xenial main'
 RUN  cat /etc/apt/sources.list.d/tarantool_1_10.list
 RUN  apt update && apt install --yes tarantool tarantool-dev build-essential cmake 
 
-RUN  mkdir /app && cd /app && tarantoolctl rocks install http
+RUN  mkdir /app && cd /app # && tarantoolctl rocks install http
 
 WORKDIR /app
 
