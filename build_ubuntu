@@ -13,8 +13,8 @@ build() {
 
     docker build --no-cache --squash -t build-tmp --network=host -f $dockerfile  .
     docker tag build-tmp $image:$tag
-    docker push $image:$tag
     docker rmi -f build-tmp
+    docker push $image:$tag
     popd > /dev/null
 }
 
