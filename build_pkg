@@ -1,0 +1,22 @@
+#!/bin/bash
+
+set -x
+
+DOCKER=docker
+which podman > /dev/null && DOCKER=podman
+
+build() {
+    pkg=$1
+    test -z "$pkg" && echo "Usage: $0 <dir>" && exit -1
+
+    cd $pkg
+    echo "Building $pkg"
+    $DOCKER image rm -f $pkg-build
+    $DOCKER build -t $pkg-build --network host .
+    $DOCKER create --network host --name $pkg-tmp $pkg-build ls /tmp/dist
+    $DOCKER cp $pkg-tmp:/tmp/dist dist
+    $DOCKER container rm -f $pkg-tmp
+    $DOCKER image rm -f $pkg-build
+}
+
+build $@
