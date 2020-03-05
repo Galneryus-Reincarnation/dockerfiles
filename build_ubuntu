@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 
+DOCKER=podman
+which docker > /dev/null && DOCKER=docker
+
 build() {
     pushd $1 > /dev/null
+    local tmp_img=$1-tmp
     local image=tnairav/$1
     local tag=latest
     local dockerfile=Dockerfile
@@ -11,9 +15,9 @@ build() {
         dockerfile=Dockerfile.$tag
     fi
 
-    docker build --no-cache --squash -t build-tmp --network=host -f $dockerfile  .
-    docker tag build-tmp $image:$tag
-    docker rmi -f build-tmp
+    docker build --no-cache --squash -t $tmp_img --network=host -f $dockerfile  .
+    docker tag $tmp_img $image:$tag
+    docker rmi -f $tmp_img
     docker push $image:$tag
     popd > /dev/null
 }

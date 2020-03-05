@@ -2,8 +2,8 @@
 
 set -x
 
-DOCKER=docker
-which podman > /dev/null && DOCKER=podman
+DOCKER=podman
+which docker > /dev/null && DOCKER=docker
 
 build() {
     pkg=$1
