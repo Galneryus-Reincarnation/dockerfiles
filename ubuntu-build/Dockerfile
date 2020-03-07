@@ -11,3 +11,4 @@ RUN  apt install --yes g++ gcc libc6-dev libffi-dev libgmp-dev make xz-utils \
 RUN  echo 'deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main' > /etc/apt/sources.list.d/pgdg.list
 RUN  curl -s https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
 RUN  apt update && apt install libpq-dev -y
+RUN  cd /tmp && wget https://github.com/commercialhaskell/stack/releases/download/v2.1.3/stack-2.1.3-linux-x86_64-static.tar.gz && tar zxf stack-*.tar.gz && cp stack-*/stack /usr/local/bin && rm -rf stack-*
