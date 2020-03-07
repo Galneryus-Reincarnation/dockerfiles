@@ -4,7 +4,9 @@ USER root
 ENV HOME                /root
 
 RUN  apt update && apt upgrade --yes
-RUN  apt install --yes g++ gcc libc6-dev libffi-dev libgmp-dev make xz-utils zlib1g-dev git gnupg netbase wget curl rsync bsdtar
+RUN  apt install --yes g++ gcc libc6-dev libffi-dev libgmp-dev make xz-utils \
+         zlib1g-dev libbsd-dev libncurses5-dev libtinfo-dev libzstd1-dev \
+         git gnupg netbase wget curl rsync bsdtar
 
 RUN  echo 'deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main' > /etc/apt/sources.list.d/pgdg.list
 RUN  curl -s https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
