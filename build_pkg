@@ -12,9 +12,9 @@ build() {
     cd $pkg
     echo "Building $pkg"
     $DOCKER image rm -f $pkg-build
-    $DOCKER build -t $pkg-build --network host .
+    $DOCKER build --no-cache -t $pkg-build --network host .
     $DOCKER create --network host --name $pkg-tmp $pkg-build ls /tmp/dist
-    $DOCKER cp $pkg-tmp:/tmp/dist dist
+    rm -rf dist && $DOCKER cp $pkg-tmp:/tmp/dist .
     $DOCKER container rm -f $pkg-tmp
     $DOCKER image rm -f $pkg-build
 }
