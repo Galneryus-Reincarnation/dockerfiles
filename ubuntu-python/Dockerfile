@@ -1,7 +1,8 @@
 FROM ubuntu:16.04
 
-USER root
-ENV HOME                /root
+USER  root
+ENV   HOME             /root
+ENV   DEBIAN_FRONTEND  noninteractive
 
 RUN  apt update && apt install --yes software-properties-common
 RUN  add-apt-repository --yes ppa:deadsnakes/ppa
