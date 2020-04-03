@@ -7,7 +7,7 @@ ENV     VER "2.4.0"
 
 RUN     true && \
             apt update && apt install autoconf -y && \
-            wget https://web.us-east-1.linodeobjects.com/public/files/deb/ck-0.7.0.deb && \
+            wget https://web.us-east-1.linodeobjects.com/public/files/deb/ck-0.7.0-1.deb && \
             apt install --yes ./ck-*.deb && \
             wget https://github.com/omniti-labs/jlog/archive/$VER.tar.gz && \
             tar zxf $VER.tar.gz && \
