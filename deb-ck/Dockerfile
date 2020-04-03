@@ -22,6 +22,8 @@ WORKDIR /tmp
 COPY    --from=BUILD /tmp/pkg /tmp/pkg
 
 ENV     VER "0.7.0"
+ENV     REV "1"
+
 RUN     true &&\
             gem install fpm && \
-            fpm -s dir -t deb -C pkg/ -p dist/ck-"$VER".deb -n ck -v "$VER"
+            fpm -s dir -t deb -C pkg/ -p dist/ck-"$VER-$REV".deb -n ck -v "$VER-$REV"

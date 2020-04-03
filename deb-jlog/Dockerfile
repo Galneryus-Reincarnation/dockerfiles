@@ -26,6 +26,8 @@ WORKDIR /tmp
 COPY    --from=BUILD /tmp/pkg /tmp/pkg
 
 ENV     VER "2.4.0"
+ENV     REV "1"
+
 RUN     true &&\
             gem install fpm && \
-            fpm -s dir -t deb -C pkg/ -p dist/jlog-"$VER".deb -n jlog -v "$VER"
+            fpm -s dir -t deb -C pkg/ -p dist/jlog-"$VER-$REV".deb -n jlog -v "$VER-$REV"
