@@ -26,7 +26,7 @@ WORKDIR /tmp
 COPY    --from=BUILD /tmp/pkg /tmp/pkg
 
 ENV     VER "2.4.0"
-ENV     REV "1"
+ENV     REV "2"
 
 RUN     true &&\
             gem install fpm && \
