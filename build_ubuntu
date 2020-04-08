@@ -28,5 +28,5 @@ build ubuntu-node 13
 build ubuntu-node-12
 build ubuntu-node-13
 build ubuntu-python
-build ubuntu-zulu
-#build ubuntu-tarantool
+build ubuntu-build-non-root
+build ubuntu-tarantool
