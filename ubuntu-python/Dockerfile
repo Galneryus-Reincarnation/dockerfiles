@@ -15,4 +15,10 @@ RUN  apt update && apt upgrade --yes && apt install --yes \
          python3.7-dev libpython3.7-dev libmysqlclient20 virtualenv python3.7-venv \
          clickhouse-client clickhouse-server
 
+RUN     locale-gen  'en_US.UTF-8'
+ENV     LC_ALL      'en_US.UTF-8'
+ENV     LANG        'en_US.UTF-8'
 
+RUN     mkdir /var/www && chown www-data:www-data /var/www
+USER    www-data
+ENV     HOME /var/www
