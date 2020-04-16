@@ -9,11 +9,6 @@ build() {
     local image=tnairav/$1
     local tag=latest
     local dockerfile=Dockerfile
-    if [ -n "$2" ]
-    then
-        tag=$2
-        dockerfile=Dockerfile.$tag
-    fi
 
     docker build --no-cache --squash -t $tmp_img --network=host -f $dockerfile  .
     docker tag $tmp_img $image:$tag
