@@ -23,8 +23,6 @@ build() {
 }
 
 build ubuntu-build
-build ubuntu-node
-build ubuntu-node 13
 build ubuntu-node-12
 build ubuntu-node-13
 build ubuntu-python
