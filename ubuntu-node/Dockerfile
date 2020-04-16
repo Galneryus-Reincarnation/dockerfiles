@@ -13,7 +13,7 @@ ENV     LANG        'en_US.UTF-8'
 
 
 RUN     cd /tmp && \
-        wget -nv https://nodejs.org/dist/v12.16.1/node-v12.16.1-linux-x64.tar.xz && \
+        wget -nv https://nodejs.org/dist/v12.16.2/node-v12.16.2-linux-x64.tar.xz && \
         bsdtar xvf node-* && \
         mv node-*/ /opt/node
 
