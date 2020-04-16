@@ -13,7 +13,7 @@ ENV     LANG        'en_US.UTF-8'
 
 
 RUN     cd /tmp && \
-        wget -nv https://nodejs.org/dist/v13.12.0/node-v13.12.0-linux-x64.tar.xz && \
+        wget -nv https://nodejs.org/dist/v13.13.0/node-v13.13.0-linux-x64.tar.xz && \
         bsdtar xvf node-* && \
         mv node-*/ /opt/node
 
