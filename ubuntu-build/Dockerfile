@@ -3,10 +3,16 @@ FROM ubuntu:16.04
 USER    root
 ENV     HOME    /root
 
-RUN  apt update && apt upgrade --yes
+RUN  apt update \
+         && apt upgrade --yes \
+         && apt install --yes software-properties-common apt-transport-https apt-utils
 RUN  apt install --yes g++ gcc libc6-dev libffi-dev libgmp-dev make xz-utils \
          zlib1g-dev libbsd-dev libncurses5-dev libtinfo-dev libzstd1-dev \
-         git gnupg netbase wget curl rsync bsdtar
+         git gnupg netbase wget curl rsync bsdtar locales
+
+RUN     locale-gen  'en_US.UTF-8'
+ENV     LC_ALL      'en_US.UTF-8'
+ENV     LANG        'en_US.UTF-8'
 
 RUN  echo 'deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main' > /etc/apt/sources.list.d/pgdg.list
 RUN  curl -s https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
