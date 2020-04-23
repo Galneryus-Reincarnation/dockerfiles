@@ -23,7 +23,7 @@ RUN  echo 'deb http://repos.azulsystems.com/ubuntu stable main' | tee /etc/apt/s
 RUN  apt update && apt install --yes zulu-11
 
 RUN  add-apt-repository --yes ppa:deadsnakes/ppa
-RUN  apt update && apt upgrade --yes && apt install --yes python3.7-dev libpython3.7-dev virtualenv python3.7-venv
+RUN  apt update && apt upgrade --yes && apt install --yes python3.7-dev libpython3.7-dev python3.7-venv
 
 RUN  curl https://raw.githubusercontent.com/paulp/sbt-extras/master/sbt > /usr/bin/sbt \
          && chmod +x /usr/bin/sbt
