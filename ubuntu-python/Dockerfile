@@ -13,10 +13,12 @@ RUN  apt update && apt upgrade --yes && apt install --yes \
          locales \
          libzstd-dev zstd \
          gnupg netbase wget curl rsync parallel \
+         python2.7-minimal \
          python3.7-dev libpython3.7-dev libmysqlclient20 python3.7-venv \
          clickhouse-client clickhouse-server
 
 RUN     ln -sv /usr/bin/python3.7 /usr/bin/python
+RUN     ln -sv /usr/bin/python3.7 /usr/bin/python3
 
 RUN     locale-gen  'en_US.UTF-8'
 ENV     LC_ALL      'en_US.UTF-8'
