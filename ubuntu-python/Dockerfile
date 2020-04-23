@@ -17,7 +17,6 @@ RUN  apt update && apt upgrade --yes && apt install --yes \
          clickhouse-client clickhouse-server
 
 RUN     ln -sv /usr/bin/python3.7 /usr/bin/python
-RUN     ln -sv /usr/bin/python3.7 /usr/bin/python3
 
 RUN     locale-gen  'en_US.UTF-8'
 ENV     LC_ALL      'en_US.UTF-8'
