@@ -3,9 +3,9 @@ FROM ubuntu:16.04
 USER    root
 ENV     HOME    /root
 
-RUN     touch /etc/apt/apt.conf.d/99no-recommends && \
-            echo 'APT::Install-Recommends "false";' >> /etc/apt/apt.conf.d/99no-recommends
-            echo 'APT::Install-Suggests "false";'   >> /etc/apt/apt.conf.d/99no-recommends
+RUN     touch /etc/apt/apt.conf.d/99no-recommends
+RUN     echo 'APT::Install-Recommends "false";' >> /etc/apt/apt.conf.d/99no-recommends
+RUN     echo 'APT::Install-Suggests "false";'   >> /etc/apt/apt.conf.d/99no-recommends
 
 RUN     apt update \
             && apt upgrade --yes \
