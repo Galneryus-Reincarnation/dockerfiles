@@ -22,9 +22,6 @@ RUN  apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 0xB199836
 RUN  echo 'deb http://repos.azulsystems.com/ubuntu stable main' | tee /etc/apt/sources.list.d/zulu.list
 RUN  apt update && apt install --yes zulu-11
 
-RUN  add-apt-repository --yes ppa:deadsnakes/ppa
-RUN  apt update && apt upgrade --yes && apt install --yes python3.7-dev libpython3.7-dev python3.7-venv
-
 RUN  curl https://raw.githubusercontent.com/paulp/sbt-extras/master/sbt > /usr/bin/sbt \
          && chmod +x /usr/bin/sbt
 
