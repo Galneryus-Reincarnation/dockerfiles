@@ -13,7 +13,7 @@ RUN  apt update && apt upgrade --yes && apt install --yes \
          locales \
          libzstd-dev zstd \
          gnupg netbase wget curl rsync parallel \
-         python2.7-minimal \
+         python2.7 \
          python3.7-dev libpython3.7-dev libmysqlclient20 python3.7-venv \
          clickhouse-client clickhouse-server
 
