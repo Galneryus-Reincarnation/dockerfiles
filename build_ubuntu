@@ -1,12 +1,16 @@
 #!/usr/bin/env bash
 
+REGISTRY="$1"
+test -z "$REGISTRY" && exit 1
+
+
 DOCKER=podman
 which docker > /dev/null && DOCKER=docker
 
 build() {
     pushd $1 > /dev/null
     local tmp_img=$1-tmp
-    local image=tnairav/$1
+    local image=$REGISTRY/tnairav/$1
     local tag=latest
     local dockerfile=Dockerfile
 
@@ -14,6 +18,7 @@ build() {
     docker tag $tmp_img $image:$tag
     docker rmi -f $tmp_img
     docker push $image:$tag
+    docker rmi $image:$tag
     popd > /dev/null
 }
 
