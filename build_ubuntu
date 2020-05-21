@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
 REGISTRY="$1"
+USERNAME="$2"
 test -z "$REGISTRY" && exit 1
+test -z "$USERNAME" && exit 1
 
 
 DOCKER=podman
@@ -10,7 +12,7 @@ which docker > /dev/null && DOCKER=docker
 build() {
     pushd $1 > /dev/null
     local tmp_img=$1-tmp
-    local image=$REGISTRY/tnairav/$1
+    local image=$REGISTRY/$USERNAME/$1
     local tag=latest
     local dockerfile=Dockerfile
 
