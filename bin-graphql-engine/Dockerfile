@@ -11,7 +11,7 @@ RUN     true && \
         ghcup install $VER_GHC && ghcup set $VER_GHC && ghcup install-cabal && \
         git clone https://github.com/hasura/graphql-engine.git && \
         cd graphql-engine/server && \
-        git checkout -b build $VER_GQLSERVER && \
+        git checkout $VER_GQLSERVER && \
         cabal v2-update && \
         cabal v2-build && \
         cp `find dist-newstyle/ -name graphql-engine -type f` . && \
