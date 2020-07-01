@@ -13,6 +13,7 @@ RUN  apt update && apt upgrade --yes && apt install --yes \
          libzstd-dev zstd \
          gnupg netbase wget curl rsync parallel \
          python3.7-dev libpython3.7-dev libmysqlclient20 python3.7-venv \
+         libmagickwand-dev \
          clickhouse-client clickhouse-server
 
 RUn     rm -f /usr/bin/python /usr/bin/python3
