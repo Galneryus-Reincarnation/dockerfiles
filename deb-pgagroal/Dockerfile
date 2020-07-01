@@ -18,7 +18,7 @@ RUN     cd /tmp/src && \
         mkdir build && cd build && \
         cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr .. && \
         make -j4 && \
-        make DESTDIR=/tmp/pkg install \
+        make DESTDIR=/tmp/pkg install && \
         find /tmp/pkg
 
 
