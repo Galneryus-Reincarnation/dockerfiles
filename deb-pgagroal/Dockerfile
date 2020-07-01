@@ -19,6 +19,7 @@ RUN     cd /tmp/src && \
         cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr .. && \
         make -j4 && \
         make DESTDIR=/tmp/pkg install && \
+        mv /tmp/pkg/usr/etc /tmp/pkg && \
         find /tmp/pkg
 
 
@@ -33,10 +34,10 @@ ENV     VER "0.7.2"
 RUN     true && \
         gem install fpm && \
         fpm -s dir -t deb -C pkg/ \
-        -p dist/pgagroal-"$VER".deb \
-        -n pgagroal \
-        -v "$VER" \
-        -d libev4 \
-        -d libssl1.1 \
-        --config-files /etc/pgagroal/pgagroal.conf \
-        --config-files /etc/pgagroal/pgagroal_hba.conf
+          -p dist/pgagroal-"$VER".deb \
+          -n pgagroal \
+          -v "$VER" \
+          -d libev4 \
+          -d libssl1.1 \
+          --config-files /etc/pgagroal/pgagroal.conf \
+          --config-files /etc/pgagroal/pgagroal_hba.conf
