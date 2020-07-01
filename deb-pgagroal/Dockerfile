@@ -8,7 +8,7 @@ ENV     VER "0.7.2"
 RUN     apt update && apt upgrade -y && \
         apt install wget libev4 libev-dev libssl1.1 libssl-dev systemd libsystemd-dev python-docutils gcc-8 cmake -y
 
-RUN     update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 60 \
+RUN     update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 60 && \
         update-alternatives --install /usr/bin/cc cc /usr/bin/gcc-8 60
 
 RUN     cd /tmp/src && \
