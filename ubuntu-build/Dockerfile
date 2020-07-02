@@ -11,7 +11,7 @@ RUN     apt update \
             && apt upgrade --yes \
             && apt install --yes software-properties-common apt-transport-https apt-utils
 RUN     apt install --yes g++ gcc libc6-dev libffi-dev libgmp-dev make xz-utils \
-            zlib1g-dev libbsd-dev libncurses5-dev libtinfo-dev libzstd1-dev \
+            libmagickwand-dev zlib1g-dev libbsd-dev libncurses5-dev libtinfo-dev libzstd1-dev \
             git gnupg netbase wget curl rsync bsdtar locales python
 
 RUN     locale-gen  'en_US.UTF-8'
