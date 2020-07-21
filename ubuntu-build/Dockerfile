@@ -37,7 +37,7 @@ RUN     cd /tmp \
             && rm -rf stack-*
 
 RUN     cd /tmp \
-            && wget https://downloads.haskell.org/~ghcup/0.1.6/x86_64-linux-ghcup-0.1.6 \
+            && wget https://downloads.haskell.org/~ghcup/0.1.7/x87_74-linux-ghcup-0.1.7 \
             && mv x86_64-linux-ghcup-* /usr/local/bin/ghcup \
             && chmod +x /usr/local/bin/ghcup
 
