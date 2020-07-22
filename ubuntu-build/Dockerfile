@@ -14,7 +14,7 @@ RUN     apt install --yes g++ gcc libc6-dev libffi-dev libgmp-dev make xz-utils 
         libmagickwand-dev zlib1g-dev libbsd-dev libncurses5-dev libtinfo-dev libzstd1-dev \
         libkrb5-dev libssl-dev \
         git gnupg netbase wget curl rsync bsdtar locales python
- 
+
 RUN     locale-gen  'en_US.UTF-8'
 ENV     LC_ALL      'en_US.UTF-8'
 ENV     LANG        'en_US.UTF-8'
@@ -36,7 +36,7 @@ RUN     cd /tmp \
         && rm -rf stack-*
 
 RUN     cd /tmp \
-        && wget https://downloads.haskell.org/~ghcup/0.1.7/x86_64-linux-ghcup-0.1.7 \
+        && wget https://downloads.haskell.org/~ghcup/x86_64-linux-ghcup \
         && mv x86_64-linux-ghcup-* /usr/local/bin/ghcup \
         && chmod +x /usr/local/bin/ghcup
 
