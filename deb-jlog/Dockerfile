@@ -12,7 +12,7 @@ RUN     true && \
             wget https://github.com/omniti-labs/jlog/archive/$VER.tar.gz && \
             tar zxf $VER.tar.gz && \
             cd jlog-$VER && \
-            sed -i 's#define DEFAULT_UNIT_LIMIT [(]4#define DEFAULT_UNIT_LIMIT (512#' jlog_private.h && \
+            sed -i 's#define DEFAULT_UNIT_LIMIT [(]4#define DEFAULT_UNIT_LIMIT (128#' jlog_private.h && \
             autoconf && \
             ./configure --prefix=/usr && \
             make -j1 && \
