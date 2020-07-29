@@ -3,7 +3,7 @@ FROM    tnairav/ubuntu-build:latest as BUILD
 RUN     mkdir /tmp/src /tmp/pkg
 WORKDIR /tmp/src
 
-ENV     VER "2.5.2"
+ENV     VER "2.5.3"
 
 RUN     true && \
             apt update && apt install autoconf -y && \
@@ -25,7 +25,7 @@ WORKDIR /tmp
 
 COPY    --from=BUILD /tmp/pkg /tmp/pkg
 
-ENV     VER "2.5.2"
+ENV     VER "2.5.3"
 ENV     REV "1"
 
 RUN     true &&\
