@@ -37,7 +37,7 @@ RUN     cd /tmp \
 
 RUN     cd /tmp \
         && wget https://downloads.haskell.org/~ghcup/x86_64-linux-ghcup \
-        && mv x86_64-linux-ghcup-* /usr/local/bin/ghcup \
+        && mv x86_64-linux-ghcup /usr/local/bin/ghcup \
         && chmod +x /usr/local/bin/ghcup
 
 RUN     curl -L https://github.com/bazelbuild/bazelisk/releases/download/v1.4.0/bazelisk-linux-amd64 > /usr/local/bin/bazel \
