@@ -25,7 +25,7 @@ RUN     apt update && apt install libpq-dev -y
 
 RUN     apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 0xB1998361219BD9C9
 RUN     echo 'deb http://repos.azulsystems.com/ubuntu stable main' | tee /etc/apt/sources.list.d/zulu.list
-RUN     apt update && apt install --yes zulu-11
+RUN     apt update && apt install --yes zulu11
 
 RUN     curl https://raw.githubusercontent.com/paulp/sbt-extras/master/sbt > /usr/bin/sbt && chmod +x /usr/bin/sbt
 
